@@ -44,27 +44,27 @@ class Player:
         else:
             print("Your inventory is empty.")
 
-# Пример использования фреймворка
+# Example of using the framework
 if __name__ == "__main__":
-    # Создание комнат
+    # Creating rooms
     living_room = Room("Living Room", "A cozy living room with a fireplace.")
     kitchen = Room("Kitchen", "A well-equipped kitchen with a dining table.")
     garden = Room("Garden", "A beautiful garden with blooming flowers.")
 
-    # Определение выходов
+    # Defining Outputs
     living_room.add_exit("east", kitchen)
     kitchen.add_exit("west", living_room)
     kitchen.add_exit("south", garden)
     garden.add_exit("north", kitchen)
 
-    # Добавление предметов
+    # Adding items
     living_room.add_item("key")
     kitchen.add_item("knife")
 
-    # Создание игрока
+    # Creating a Player
     player = Player(living_room)
 
-    # Начало игры
+    # Start the game
     player.current_room.display_info()
 
     while True:
